@@ -1,3 +1,9 @@
+def abrirArquivo():
+    abrir = open("resultados.txt", "w")
+    abrir.close()
+
+abrirArquivo()
+
 def main():
 
     import os
@@ -77,11 +83,11 @@ def main():
                             if op2 == "1":
                                 main()
                             elif op2 == "2":
-                                break
+                               exit()
                             else:
                                 print("Carácter inválido!")
                 if op2 == "2":
-                    break
+                    exit()
 
                 elif letra not in palavraChave:
                     erros = erros + 1
@@ -101,11 +107,11 @@ def main():
                             if op2 == "1":
                                 main()
                             elif op2 == "2":
-                                break
+                               exit()
                             else:
                                 print("Carácter inválido!")
                     if op2 == "2":
-                        break
+                       exit()
                        
             else:
                 print("ERRO! Só é permitido digitar uma letra.")
@@ -130,11 +136,11 @@ def main():
                                 if op2 == "1":
                                     main()
                                 elif op2 == "2":
-                                    break
+                                    exit()
                                 else:
                                     print("Carácter inválido!")
                     if op2 == "2":
-                        break
+                        exit()
 
                     elif letra not in palavraChave:
                         erros = erros + 1
@@ -154,11 +160,11 @@ def main():
                                 if op2 == "1":
                                     main()
                                 elif op2 == "2":
-                                    break
+                                    exit()
                                 else:
                                     print("Carácter inválido!")   
                         if op2 == "2":
-                            break                     
+                            exit()                     
             
         elif op == "2":
             if dicasCont > 2:
@@ -189,11 +195,11 @@ def main():
                                 if op2 == "1":
                                     main()
                                 elif op2 == "2":
-                                    break
+                                    exit()
                                 else:
                                     print("Carácter inválido!") 
                     if op2 == "2":
-                        break
+                        exit()
                                            
 
                     elif letra not in palavraChave:
@@ -214,14 +220,14 @@ def main():
                                 if op2 == "1":
                                     main()
                                 elif op2 == "2":
-                                    break
+                                    exit()
                                 else:
                                     print("Carácter inválido!")
                         if op2 == "2":
-                            break
+                            exit()
 
         elif op == "3":
-            break
+            exit()
 
         else:
             print("Caracter inválido!")

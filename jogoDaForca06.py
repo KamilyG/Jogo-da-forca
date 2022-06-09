@@ -58,7 +58,10 @@ def lerArquivos():
 
 alfabeto = list("abcdefghijklmnopqrstuvwxyz")
 
-abrirArquivo()
+try:
+    abrirArquivo()
+except:
+    lerArquivos()
 
 def main():
 
@@ -99,9 +102,21 @@ def main():
 
     print(desafiante +", responda as perguntas a seguir.\n ATENÇÂO! Não deixe que o competidor veja.")
     palavraChave = str(input("Digite uma palavra-chave: "))
-    dica1 = str(input("Digite a primeira dica: "))
-    dica2 = str(input("Digite a segunda dica: "))
-    dica3 = str(input("Digite a terceira dica: "))
+    
+    dica1 = ''
+    dica2 = ''
+    dica3 = ''
+
+    while dica1 == '':
+        print("Por favor, preencha a primeira dica.")
+        dica1 = str(input("Digite a primeira dica 1: "))
+    while dica2 == '':
+        print("Por favor, preencha a segunda dica.")
+        dica2 = str(input("Digite a segunda dica 2: "))
+    while dica3 == '':
+        print("Por favor, preencha a terceira dica.")
+        dica3 = str(input("Digite a terceira dica 3: "))
+      
     os.system("cls")
 
     estadoAtual = ["*" for _ in range(len(palavraChave))]
@@ -225,7 +240,7 @@ def main():
             if dicasCont > 2:
                 print("Você não tem mais dicas!")
             else:
-                print(dicas[dicasCont])
+                print("Dica: " + dicas[dicasCont])
                 dicasCont = dicasCont + 1
 
             print("Letras digitadas: "+ str(digitadas).strip('[]'))
